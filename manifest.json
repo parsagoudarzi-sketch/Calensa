@@ -1,0 +1,11 @@
+
+{
+  "manifest_version": 3,
+  "name": "Calensa",
+  "version": "1.0.0",
+  "description": "A modern date countdown and age calculator.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Calensa"
+  }
+}
