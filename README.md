@@ -39,7 +39,7 @@ Calensa is currently available as a source-code installation.
 1. Download or clone this repository:
 
    ```bash
-   git clone https://github.com/parsagoudarzi-sketch/Calensa.git
+   git clone https://github.com/parsagoudarzi-sketch/Calensa
    ```
 
 2. Open Google Chrome and navigate to:
