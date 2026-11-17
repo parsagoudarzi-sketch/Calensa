@@ -91,4 +91,8 @@ Calensa is built using:
 - CSS3
 - JavaScript
 - Chrome Extension APIs
+<<<<<<< HEAD
 - JavaScript Internationalization API (`Intl`
+=======
+- JavaScript Internationalization API (`Intl`
+>>>>>>> 81b23337f3e67162baa53bbc837e60ea5c0f8985
