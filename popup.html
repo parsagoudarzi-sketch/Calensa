@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calensa</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div class="brand">
+                <div class="logo">C</div>
+                <div>
+                    <h1>Calensa</h1>
+                    <p data-i18n="subtitle">Make every date count.</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button id="languageBtn" class="icon-btn">EN</button>
+                <button id="themeBtn" class="icon-btn">☀</button>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab active" data-tab="countdown"
+                data-i18n="countdown">Countdown</button>
+
+            <button class="tab" data-tab="age"
+                data-i18n="age">Age Calculator</button>
+        </nav>
+
+        <section id="countdownSection" class="content">
+
+            <h2 data-i18n="countdownTitle">
+                Count down to your special day
+            </h2>
+
+            <label for="targetDate" data-i18n="targetDate">
+                Select a date
+            </label>
+
+            <input type="date" id="targetDate">
+
+            <div class="result">
+                <div class="time-box">
+                    <strong id="days">--</strong>
+                    <span data-i18n="days">Days</span>
+                </div>
+
+                <div class="time-box">
+                    <strong id="hours">--</strong>
+                    <span data-i18n="hours">Hours</span>
+                </div>
+
+                <div class="time-box">
+                    <strong id="minutes">--</strong>
+                    <span data-i18n="minutes">Minutes</span>
+                </div>
+
+                <div class="time-box">
+                    <strong id="seconds">--</strong>
+                    <span data-i18n="seconds">Seconds</span>
+                </div>
+            </div>
+
+            <p id="countdownMessage" class="message"
+                data-i18n="chooseDate">
+                Choose a date to start.
+            </p>
+
+        </section>
+
+        <section id="ageSection" class="content hidden">
+
+            <h2 data-i18n="ageTitle">Discover your exact age</h2>
+
+            <label for="birthDate" data-i18n="birthDate">
+                Your birth date
+            </label>
+
+            <input type="date" id="birthDate">
+
+            <div class="age-result">
+                <div>
+                    <strong id="ageYears">--</strong>
+                    <span data-i18n="years">Years</span>
+                </div>
+
+                <div>
+                    <strong id="ageMonths">--</strong>
+                    <span data-i18n="months">Months</span>
+                </div>
+
+                <div>
+                    <strong id="ageDays">--</strong>
+                    <span data-i18n="days">Days</span>
+                </div>
+            </div>
+
+            <p id="ageMessage" class="message"
+                data-i18n="enterBirth">
+                Enter your birth date.
+            </p>
+
+        </section>
+
+        <footer>
+            <span>Calensa</span>
+            <span>Version 1.0.0</span>
+        </footer>
+
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+</html>
