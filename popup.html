@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-
     <main class="app">
 
         <header class="header">
@@ -27,95 +26,104 @@
         </header>
 
         <nav class="tabs">
-            <button class="tab active" data-tab="countdown"
-                data-i18n="countdown">Countdown</button>
-
-            <button class="tab" data-tab="age"
-                data-i18n="age">Age Calculator</button>
+            <button class="tab active" data-tab="countdown" data-i18n="countdown">
+                Countdown
+            </button>
+            <button class="tab" data-tab="age" data-i18n="age">
+                Age Calculator
+            </button>
         </nav>
 
         <section id="countdownSection" class="content">
+            <div class="section-heading">
+                <span class="eyebrow" data-i18n="countdownLabel">COUNTDOWN</span>
+                <h2 data-i18n="countdownTitle">Count down to your special day</h2>
+            </div>
 
-            <h2 data-i18n="countdownTitle">
-                Count down to your special day
-            </h2>
+            <label data-i18n="targetDate">Select a date</label>
 
-            <label for="targetDate" data-i18n="targetDate">
-                Select a date
-            </label>
-
-            <input type="date" id="targetDate">
+            <div class="date-controls">
+                <select id="targetCalendar" class="calendar-select">
+                    <option value="gregorian">Gregorian</option>
+                    <option value="jalali">Solar Hijri</option>
+                </select>
+                <input id="targetDate" type="text"
+                    placeholder="YYYY/MM/DD"
+                    inputmode="numeric"
+                    autocomplete="off">
+            </div>
 
             <div class="result">
                 <div class="time-box">
                     <strong id="days">--</strong>
                     <span data-i18n="days">Days</span>
                 </div>
-
                 <div class="time-box">
                     <strong id="hours">--</strong>
                     <span data-i18n="hours">Hours</span>
                 </div>
-
                 <div class="time-box">
                     <strong id="minutes">--</strong>
                     <span data-i18n="minutes">Minutes</span>
                 </div>
-
                 <div class="time-box">
                     <strong id="seconds">--</strong>
                     <span data-i18n="seconds">Seconds</span>
                 </div>
             </div>
 
-            <p id="countdownMessage" class="message"
-                data-i18n="chooseDate">
+            <p id="countdownMessage" class="message" data-i18n="chooseDate">
                 Choose a date to start.
             </p>
-
         </section>
 
         <section id="ageSection" class="content hidden">
+            <div class="section-heading">
+                <span class="eyebrow" data-i18n="ageLabel">AGE CALCULATOR</span>
+                <h2 data-i18n="ageTitle">Discover your exact age</h2>
+            </div>
 
-            <h2 data-i18n="ageTitle">Discover your exact age</h2>
+            <label data-i18n="birthDate">Your birth date</label>
 
-            <label for="birthDate" data-i18n="birthDate">
-                Your birth date
-            </label>
-
-            <input type="date" id="birthDate">
+            <div class="date-controls">
+                <select id="birthCalendar" class="calendar-select">
+                    <option value="gregorian">Gregorian</option>
+                    <option value="jalali">Solar Hijri</option>
+                </select>
+                <input id="birthDate" type="text"
+                    placeholder="YYYY/MM/DD"
+                    inputmode="numeric"
+                    autocomplete="off">
+            </div>
 
             <div class="age-result">
                 <div>
                     <strong id="ageYears">--</strong>
                     <span data-i18n="years">Years</span>
                 </div>
-
                 <div>
                     <strong id="ageMonths">--</strong>
                     <span data-i18n="months">Months</span>
                 </div>
-
                 <div>
                     <strong id="ageDays">--</strong>
                     <span data-i18n="days">Days</span>
                 </div>
             </div>
 
-            <p id="ageMessage" class="message"
-                data-i18n="enterBirth">
+            <p id="ageMessage" class="message" data-i18n="enterBirth">
                 Enter your birth date.
             </p>
-
         </section>
 
         <footer>
             <span>Calensa</span>
-            <span>Version 1.0.0</span>
+            <span>Version 1.1.0</span>
         </footer>
 
     </main>
 
+    <script src="scripts/calendar.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>
