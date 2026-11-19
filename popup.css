@@ -279,3 +279,19 @@ footer {
 [dir="rtl"] .eyebrow {
     letter-spacing: 0;
 }
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("assets/fonts/Vazirmatn.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+body {
+    font-family: "Vazirmatn", sans-serif;
+}
+
+[dir="rtl"] {
+    font-family: "Vazirmatn", sans-serif;
+}

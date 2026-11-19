@@ -2,13 +2,43 @@
 {
   "manifest_version": 3,
   "name": "Calensa",
-  "version": "1.0.0",
-  "description": "A modern date countdown and age calculator.",
+  "version": "1.1.0",
+  "description": "Your personal time and date dashboard.",
   "permissions": [
     "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
   ],
   "action": {
     "default_popup": "popup.html",
     "default_title": "Calensa"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "scripts/datebar.js"
+      ],
+      "css": [
+        "styles/datebar.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/fonts/*"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ]
 }
